@@ -1,7 +1,7 @@
 import dash
 from dash.dependencies import Input, Output
 import dash_html_components as html
-import dash_pivottable
+import my_dash_pivottable
 
 from data import data
 
@@ -9,7 +9,7 @@ app = dash.Dash(__name__)
 app.title = 'My Dash example'
 
 app.layout = html.Div([
-    dash_pivottable.PivotTable(
+    my_dash_pivottable.PivotTable(
         id='table',
         data=data,
         cols=['Day of Week'],
